@@ -1,0 +1,23 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:grok="http://namespaces.zope.org/grok"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="sinanet.gelso">
+
+  <includeDependencies package="." />
+
+
+  <grok:grok package="." />
+
+  <genericsetup:registerProfile
+      name="default"
+      title="SINAnet GELSO"
+      directory="profiles/default"
+      description="Installs the sinanet.gelso package"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+  <adapter name="data_inizio" factory=".scheda_progetto.data_inizio_indexer" />
+
+</configure>

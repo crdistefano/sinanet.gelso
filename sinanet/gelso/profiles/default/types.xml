@@ -1,0 +1,13 @@
+<object name="portal_types">
+   
+ <!-- This file registers new types with portal_types. The types are
+      then configured with the corresponding files in types/*.xml.
+   -->
+ 
+ <object name="sinanet.gelso.categoriepromotori" meta_type="Dexterity FTI"/>
+ <object name="sinanet.gelso.promotori" meta_type="Dexterity FTI"/>
+ <object name="sinanet.gelso.anagraficacontatti" meta_type="Dexterity FTI"/>
+ <object name="sinanet.gelso.storicocomunicazioni" meta_type="Dexterity FTI"/>
+ <object name="sinanet.gelso.schedaprogetto" meta_type="Dexterity FTI"/>
+ <object name="sinanet.gelso.obiettivi" meta_type="Dexterity FTI"/>
+</object>

@@ -1,0 +1,50 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="example.conference">
+<body>
+
+<metal:main fill-slot="main">
+    <tal:main-macro metal:define-macro="main">
+
+        <div tal:replace="structure provider:plone.abovecontenttitle" />
+
+        <h1 class="documentFirstHeading" tal:content="context/title" />
+
+
+        <div tal:replace="structure provider:plone.belowcontenttitle" />
+
+        <p class="documentDescription" tal:content="context/description" />
+
+        <div tal:replace="structure provider:plone.abovecontentbody" />
+
+
+
+			<div tal:define="contatto view/prova">
+			<p><b>Referente : </b><span tal:content="contatto/title"></span></p>
+			<p><b>Unità organizzativa : </b><span tal:content="contatto/unita_organizzativa"></span></p>			
+			<p><b>Ruolo : </b><span tal:content="contatto/ruolo"></span></p>
+			<p><b>Regione : </b><span tal:content="contatto/regione"></span></p>
+			<p><b>Provincia : </b><span tal:content="contatto/slaveMasterFieldProvincia"></span></p>
+			<p><b>Comune : </b><span tal:content="contatto/slaveFieldComune"></span></p>
+			<p><b>Telefono : </b><span tal:content="contatto/telefono"></span></p>
+			<p><b>Skype : </b><span tal:content="contatto/skype"></span></p>
+
+
+				<p tal:repeat="comunicazione contatto/relatedItems">
+					<b >Comunicazioni avute : </b>
+					<span tal:content="comunicazione/to_object/Title | nothing"></span>
+				</p>
+
+			</div>
+
+        <div tal:replace="structure provider:plone.belowcontentbody" />
+
+    </tal:main-macro>
+</metal:main>
+
+</body>
+</html>

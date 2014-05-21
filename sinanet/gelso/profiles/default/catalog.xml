@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<object name="portal_catalog" meta_type="Plone Catalog Tool">
+ <index name="settore_intervento" meta_type="KeywordIndex">
+  <indexed_attr value="settore_intervento"/>
+ </index>
+ <index name="dimensioni_amministrazione" meta_type="KeywordIndex">
+  <indexed_attr value="dimensioni_amministrazione"/>
+ </index>
+ <index name="strumento_finanziamento" meta_type="KeywordIndex">
+  <indexed_attr value="strumento_finanziamento"/>
+ </index>
+ <index name="localizzazione" meta_type="KeywordIndex">
+  <indexed_attr value="localizzazione"/>
+ </index>
+ <index name="data_inizio" meta_type="FieldIndex">
+  <indexed_attr value="data_inizio"/>
+ </index>
+ <index name="ambito" meta_type="KeywordIndex">
+  <indexed_attr value="ambito"/>
+ </index>
+</object>
