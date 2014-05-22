@@ -181,16 +181,16 @@ class IAnagraficaContatti(form.Schema):
 
 
 
-class Alternativa(grok.View):
+class View(grok.View):
 
    
     grok.context(IAnagraficaContatti)
     grok.require('zope2.View')
 
-#    grok.name('view')
+   # grok.name('view')
 
     # Add view methods here
-    def prova(self):
+    def anagrafiche(self):
             from zope.component import getMultiAdapter
             from zope.component.hooks import getSite
 
